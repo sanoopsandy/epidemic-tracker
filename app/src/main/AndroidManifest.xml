@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="in.tracker.covid">
+    package="in.tracker.epidemic">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".DashboardActivity">
+        <activity android:name="in.tracker.epidemic.DashboardActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

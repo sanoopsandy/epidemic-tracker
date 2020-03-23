@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "423871513627",
-    "firebase_url": "https://covid-tracker-c16b7.firebaseio.com",
-    "project_id": "covid-tracker-c16b7",
-    "storage_bucket": "covid-tracker-c16b7.appspot.com"
+    "project_number": "527702044844",
+    "firebase_url": "https://epidemic-tracker-31389.firebaseio.com",
+    "project_id": "epidemic-tracker-31389",
+    "storage_bucket": "epidemic-tracker-31389.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:423871513627:android:8223e68c14ce2f90b764be",
+        "mobilesdk_app_id": "1:527702044844:android:45a98f2616e66ea182af09",
         "android_client_info": {
-          "package_name": "in.tracker.covid"
+          "package_name": "in.tracker.epidemic"
         }
       },
       "oauth_client": [
         {
-          "client_id": "423871513627-3e313bfbiiohd3adntg6nabhi6mlkalv.apps.googleusercontent.com",
+          "client_id": "527702044844-i0kgs6v1upilpot6ljolapaifqm091rn.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAj70nF2BY3LTsua2yKk5IkclsaknyRDUs"
+          "current_key": "AIzaSyB0qxd7Qd4GzwaTsLPxnRmlOmB0i3XPuAw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "423871513627-3e313bfbiiohd3adntg6nabhi6mlkalv.apps.googleusercontent.com",
+              "client_id": "527702044844-i0kgs6v1upilpot6ljolapaifqm091rn.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
