@@ -1,0 +1,77 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField 'String', 'BASE_URL', '"https://coronavirus-monitor.p.rapidapi.com"'
+            buildConfigField 'String', 'RAPID_API_HOST', '"coronavirus-monitor.p.rapidapi.com"'
+            buildConfigField 'String', 'RAPID_API_KEY', '"dRMwWwhlOimsh6LBqixSQfHXEB4rp1j6D6JjsnKsefDkMCBqmL"'
+        }
+        debug {
+            buildConfigField 'String', 'BASE_URL', '"https://coronavirus-monitor.p.rapidapi.com"'
+            buildConfigField 'String', 'RAPID_API_HOST', '"coronavirus-monitor.p.rapidapi.com"'
+            buildConfigField 'String', 'RAPID_API_KEY', '"dRMwWwhlOimsh6LBqixSQfHXEB4rp1j6D6JjsnKsefDkMCBqmL"'
+        }
+    }
+    dataBinding {
+        enabled true
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    api libraries.constraintLayout
+    api libraries.dagger
+    kapt libraries.daggerCompiler
+
+    api libraries.glide
+    kapt libraries.glideCompiler
+
+    api libraries.navigationFragment
+    api libraries.navigationUi
+
+    api libraries.coroutinesx
+
+    implementation 'com.facebook.stetho:stetho:1.5.1'
+
+    api libraries.firebaseAnalytics
+
+    api libraries.retrofit
+    api libraries.gson
+    api libraries.okhttp
+    api libraries.loggingInterceptor
+
+    api libraries.room
+    api libraries.roomCoroutines
+    kapt libraries.roomCompiler
+
+    api libraries.liveDataKtx
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

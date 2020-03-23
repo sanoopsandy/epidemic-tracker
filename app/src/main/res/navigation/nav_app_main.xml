@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_app_main"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="in.tracker.covid.screens.dashboard.DashboardFragment"
+        android:label="DashboardFragment"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_dashboardFragment_to_countryCasesFragment"
+            app:destination="@id/countryCasesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/countryCasesFragment"
+        android:name="in.tracker.covid.screens.country.CountryCasesFragment"
+        android:label="CountryCasesFragment"
+        tools:layout="@layout/fragment_country_cases" >
+        <action
+            android:id="@+id/action_countryCasesFragment_to_countryDetails"
+            app:destination="@id/countryDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="in.tracker.covid.screens.splash.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/countryDetails"
+        android:name="in.tracker.covid.screens.details.CountryDetails"
+        android:label="CountryDetails" >
+        <argument
+            android:name="countryName"
+            app:argType="string" />
+    </fragment>
+</navigation>
